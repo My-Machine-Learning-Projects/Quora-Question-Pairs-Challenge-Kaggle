@@ -33,7 +33,7 @@ I used Python for the rest of the process. However, since Python reads csv files
 I tried 3 different approaches:
 1. Using Cosine Similarity as a metric
 2. Using WordNet Similarity as a metric
-3. Using both together as a metric
+3. Using both together (Combined Similarity) as a metric
 
 #### 1. Using Cosine Similarity as a metric ####
 **cosine_similarity_threshold_finder.py** determines the average threshold cosine similarity value for similar/notsimilar question pairs. It does so by first calculating the cosine similarity for each question pair and taking the corresponding averages. Refer the program for detailed explanation (explained in the comments).  
@@ -52,6 +52,8 @@ WordNet similarity is basically the similarity between 2 sentences, calculated u
   
 **wordnet_similarity_threshold_finder.py** determines the average threshold wordnet similarity value for similar/notsimilar question pairs. It does so by first calculating the wordnet similarity for each question pair and taking the corresponding averages. Refer the program for detailed explanation (explained in the comments).  
   
+_NOTE: There was a UTF-8 encoding issue while running the program. Changes have been made in the program to avoid those errors._
+  
 The following is the output of the program:  
 ![Output of wordnet_similarity_threshold_finder.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Threshold%20for%20Wordnet%20Similarity%20value.PNG "Output of wordnet_similarity_threshold_finder.py")
 
@@ -60,3 +62,15 @@ The accuracy was calculated using **testing_wordnet.py**. See the program for ex
   
 The following accuracy was obtained using WordNet Similarity as a metric:
 ![Output of testing_wordnet.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Accuracy%20using%20WordNet%20Similarity.PNG "Output of testing_wordnet.py")
+
+As shown, it achieved a lower accuracy than testing_cosine.py.  
+
+#### 2. Using both together (Combined Similarity) as a metric ####
+The combined threshold is the average of the Cosine Similarity threshold and the WordNet Similarity threshold.  
+
+##### Accuracy #####
+The accuracy was calculated using **testing_combined.py**. See the program for explanation.  
+  
+The following accuracy was obtained using WordNet Similarity as a metric:
+![Output of testing_combined.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Accuracy%20using%20Combined%20Similarity.PNG "Output of testing_combined.py")
+

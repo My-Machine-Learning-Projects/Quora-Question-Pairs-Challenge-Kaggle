@@ -35,6 +35,25 @@ I tried 3 different approaches:
 2. Using WordNet Similarity as a metric
 3. Using both together (Combined Similarity) as a metric
 
+_NOTE: Before calculating accuracy, I created train_similar_not_similar_combined.csv using MATLAB._  
+  
+These steps were used to get train_similar_not_similar_combined.csv:
+
+1. Open MATLAB.
+2. Load both the csv files (train_similar.csv and train_not_similar.csv) as tables, by double clicking on them. Make sure to change the column headers to question1, question2 and is_duplicate before importing.
+They get imported as workspace variables trainsimilar and trainnotsimilar.
+3. Type the following in the command window:
+
+```a = trainsimilar;
+b = trainnotsimilar;
+c = vertcat(a,b);
+trainsimilarnotsimilarcombined = c;
+trainsimilarnotsimilarcombined = trainsimilarnotsimilarcombined(1:404290, :); % to remove some empty rows at the end
+writetable(trainsimilarnotsimilarcombined, 'train_similar_not_similar_combined.csv');
+```
+
+However, the first row of train_similar_not_similar_combined.csv becomes "question1, question2, is_duplicate". So, remove that row using LibreOffice Calc.
+
 #### 1. Using Cosine Similarity as a metric ####
 **cosine_similarity_threshold_finder.py** determines the average threshold cosine similarity value for similar/notsimilar question pairs. It does so by first calculating the cosine similarity for each question pair and taking the corresponding averages. Refer the program for detailed explanation (explained in the comments).  
   

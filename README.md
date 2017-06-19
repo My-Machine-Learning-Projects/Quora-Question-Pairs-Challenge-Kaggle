@@ -43,5 +43,20 @@ The following is the output of the program:
 
 ##### Accuracy #####
 The accuracy was calculated using **testing_cosine.py**. See the program for explanation.  
+  
 The following accuracy was obtained using Cosine Similarity as a metric:
 ![Output of testing_cosine.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Accuracy%20using%20Cosine%20Simiarity.PNG "Output of testing_cosine.py")
+
+#### 2. Using WordNet Similarity as a metric ####
+WordNet similarity is basically the similarity between 2 sentences, calculated using WordNet. So, this is a better measure than cosine similarity because it incorporates semantic similarity. It internally looks for synsets for each word in the sentence and compares them to those of the words in the other sentence. However, it took much longer to compute.  
+  
+**wordnet_similarity_threshold_finder.py** determines the average threshold wordnet similarity value for similar/notsimilar question pairs. It does so by first calculating the wordnet similarity for each question pair and taking the corresponding averages. Refer the program for detailed explanation (explained in the comments).  
+  
+The following is the output of the program:  
+![Output of wordnet_similarity_threshold_finder.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Threshold%20for%20Wordnet%20Similarity%20value.PNG "Output of wordnet_similarity_threshold_finder.py")
+
+##### Accuracy #####
+The accuracy was calculated using **testing_wordnet.py**. See the program for explanation.  
+  
+The following accuracy was obtained using WordNet Similarity as a metric:
+![Output of testing_wordnet.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Accuracy%20using%20Wordnet%20Simiarity.PNG "Output of testing_wordnet.py")

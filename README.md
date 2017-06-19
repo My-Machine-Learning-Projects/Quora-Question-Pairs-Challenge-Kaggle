@@ -30,3 +30,12 @@ This created train_similar.csv and train_not_similar.csv.
 I used Python for the rest of the process. However, since Python reads csv files from first line and takes the header as the first line, I removed the first row (header row i.e. question1, question2, is_duplicate) from both the files using LibreOffice Calc.  
 
 ### Processing ### 
+I tried 3 different approaches:
+1. Using Cosine Similarity as a metric
+2. Using WordNet Similarity as a metric
+3. Using both together as a metric
+
+#### 1. Using Cosine Similarity as a metric ####
+cosine_similarity_threshold_finder.py determines the average threshold cosine similarity value for similar/notsimilar question pairs. It does so by first calculating the cosine similarity for each question pair and taking the corresponding averages. Refer to the program for explanation (explained in the comments).  
+The following shows the output of the program:  
+![Output of cosine_similarity_threshold_finder.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Threshold%20for%20Cosine%20Similarity%20value.PNG "Output of cosine_similarity_threshold_finder.py")

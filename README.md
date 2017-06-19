@@ -36,6 +36,7 @@ I tried 3 different approaches:
 3. Using both together as a metric
 
 #### 1. Using Cosine Similarity as a metric ####
-cosine_similarity_threshold_finder.py determines the average threshold cosine similarity value for similar/notsimilar question pairs. It does so by first calculating the cosine similarity for each question pair and taking the corresponding averages. Refer to the program for explanation (explained in the comments).  
+cosine_similarity_threshold_finder.py determines the average threshold cosine similarity value for similar/notsimilar question pairs. It does so by first calculating the cosine similarity for each question pair and taking the corresponding averages. Refer to the program for detailed explanation (explained in the comments).  
+  
 The following shows the output of the program:  
 ![Output of cosine_similarity_threshold_finder.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Threshold%20for%20Cosine%20Similarity%20value.PNG "Output of cosine_similarity_threshold_finder.py")

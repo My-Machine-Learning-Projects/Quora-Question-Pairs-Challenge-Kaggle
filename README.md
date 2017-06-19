@@ -9,7 +9,7 @@ _Although I didn't do so well in the competition (I ranked 2798/3307), I conside
 The data for this challenge was made available on the competition website: https://www.kaggle.com/c/quora-question-pairs/data  
 
 ### Pre-Processing ##
-I downloaded train.csv and test.csv from the above link. Then, I used MATLAB to split train.csv into two files (train_not_similar.csv and train_similar.csv) based on the values in the 'is_duplicate' column i.e. 0 an 1 respectively.  
+I downloaded train.csv and test.csv from the above link. Then, I used MATLAB to split train.csv into two files (train_not_similar.csv and train_similar.csv) based on the values in the 'is_duplicate' column i.e. 0 and 1 respectively.  
 
 To do so, in MATLAB, I first loaded train.csv (as a table) by doube-clicking on it, and then executed the following commands in the command window:
 

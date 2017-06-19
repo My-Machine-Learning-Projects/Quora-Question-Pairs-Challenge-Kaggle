@@ -73,3 +73,5 @@ The accuracy was calculated using **testing_combined.py**. See the program for e
   
 The following accuracy was obtained using Combined Similarity as a metric:
 ![Output of testing_combined.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Accuracy%20using%20Combined%20Similarity.PNG "Output of testing_combined.py")
+
+As shown, it achieved a slightly higher accuracy than testing_cosine.py.

@@ -94,3 +94,30 @@ The following accuracy was obtained using Combined Similarity as a metric:
 ![Output of testing_combined.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Accuracy%20using%20Combined%20Similarity.PNG "Output of testing_combined.py")
 
 As shown, it achieved a slightly higher accuracy than testing_cosine.py.
+
+### My Submissions ###
+
+#### Some Preprocessing ####
+The test.csv file has a few empty rows at the bottom. To remove them, I used MATLAB.  
+In MATLAB, I loaded test.csv as a table by double-clicking on it. It gets loaded as a workspace variable called 'test'. To remove the last few empty rows, I executed the following in the command window:  
+```testfinal = test;
+testfinal = testfinal(1:2345796, :);  % remove empty rows
+writetable(testfinal, 'test_final.csv');  % save as test_final.csv
+```
+This creates test_final.csv.  
+Now, since Python will treat the header row as the first line, I removed the first row (test_id, question1, question2) from test_final.csv using a software called CSVEd. (LibreOffice Calc wasn't able to open the file and threw this error: "The maximum number of rows has been exceeded."). That's why I had to use CSVEd.
+
+#### Submission Attempts ####
+I had two submissions, one using Cosine Similarity and the other using Combined Similarity. Log loss was used as the testing metric by Kaggle.  
+The two submissions were as follows:
+##### 1. Using Cosine Similarity #####
+This submission made use of Cosine Similarity to estimate the similarity between two sentences/questions.  
+Check **test_cosine.py** for explanation. It calculates the Cosine Similarity between the question pairs in test_final.csv and creates submission_cosine.csv, which I submitted on Kaggle. This submission received a Log Loss score of 0.71878, and ranked 2798/3307 on the final leaderboard.
+
+##### 2. Using Combined Similarity #####
+This submission made use of Combined Similarity (a combination of Cosine Similarity and WordNet Similarity) to estimate the similarity between two sentences/questions.  
+Check **test.py** for explanation. It calculates the Combined Similarity between the question pairs in test_final.csv and creates submission.csv, which I submitted on Kaggle. This submission received a Log Loss score of 0.82967. A higher Log Loss score indicates lower accuracy, therefore it wasn't an improvement over my first submission.  
+  
+Therefore, my first submission was considered as my final submission.  
+  
+Although I didn't perform well enough in the competition, I decided to share my experience here anyway.  

@@ -71,6 +71,5 @@ The combined threshold is the average of the Cosine Similarity threshold and the
 ##### Accuracy #####
 The accuracy was calculated using **testing_combined.py**. See the program for explanation.  
   
-The following accuracy was obtained using WordNet Similarity as a metric:
+The following accuracy was obtained using Combined Similarity as a metric:
 ![Output of testing_combined.py](https://github.com/My-Machine-Learning-Projects/Quora-Question-Pairs-Challenge-Kaggle/blob/master/Accuracy%20using%20Combined%20Similarity.PNG "Output of testing_combined.py")
-
